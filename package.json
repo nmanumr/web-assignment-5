@@ -1,0 +1,22 @@
+{
+  "name": "products-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development postcss ./base.css -o ./styles.min.css -w",
+    "build": "NODE_ENV=production postcss ./base.css -o ./styles.min.css"
+  },
+  "author": "nmanumr",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
+    "tailwindcss": "^2.1.1"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/jit": "^0.1.18",
+    "cssnano": "^4.1.11"
+  }
+}

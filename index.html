@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Crud</title>
+
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="md:flex md:items-center md:justify-between py-8">
+            <div class="flex-1 min-w-0">
+                <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+                    All Products
+                </h2>
+            </div>
+            <div class="mt-4 flex md:mt-0 md:ml-4">
+                <button type="button" onclick="addProduct()" class="outline-btn">
+                    Add Products
+                </button>
+            </div>
+        </div>
+
+
+        <div id="products" class="mt-2 mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        </div>
+    </div>
+
+    <aside class="fixed inset-0 overflow-hidden aside closed" id="aside">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="overlay" onclick="closeAside()"></div>
+
+            <div class="main-wrapper">
+                <div class="main">
+                    <form id="product-form">
+                        <div>
+                            <div class="flex items-start justify-between">
+                                <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">
+                                    Add Product
+                                </h2>
+                                <div class="ml-3 h-7 flex items-center">
+                                    <button type="button" onclick="closeAside()"
+                                        class="bg-white rounded-sm text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex-1">
+                            <div class="space-y-6 pt-6 pb-5">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-900">
+                                        Prouct Name
+                                    </label>
+                                    <div class="mt-1">
+                                        <input type="text" name="name" id="name" required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="price" class="block text-sm font-medium text-gray-900">
+                                        Price
+                                    </label>
+                                    <div class="mt-1">
+                                        <input type="number" name="price" id="price" required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="color" class="block text-sm font-medium text-gray-900">
+                                        Color
+                                    </label>
+                                    <div class="mt-1">
+                                        <input type="text" name="color" id="color" required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="department" class="block text-sm font-medium text-gray-900">
+                                        Department
+                                    </label>
+                                    <div class="mt-1">
+                                        <select id="department" name="department" required>
+                                            <option>Clothing</option>
+                                            <option>Industrial</option>
+                                            <option>Tools</option>
+                                            <option>Movies</option>
+                                            <option>Grocery</option>
+                                            <option>Kids</option>
+                                            <option>Garden</option>
+                                            <option>Computers</option>
+                                            <option>Jewelery</option>
+                                            <option>Music</option>
+                                            <option>Automotive</option>
+                                            <option>Beauty</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="description" class="block text-sm font-medium text-gray-900">
+                                        Description
+                                    </label>
+                                    <div class="mt-1">
+                                        <textarea id="description" name="description" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 border-t border-gray-200 py-5">
+                            <div class="space-x-3 flex justify-end">
+                                <button type="button" onclick="closeAside()" class="outline-btn">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="primary-btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
